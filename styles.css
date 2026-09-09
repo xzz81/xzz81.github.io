@@ -284,6 +284,28 @@ ul {
   margin-top: 12px;
 }
 
+.research-vision {
+  container-type: inline-size;
+  margin: 28px 0;
+}
+
+.research-vision-frame {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.85;
+  border: 0;
+  background: #ffffff;
+}
+
+@container (max-width: 700px) {
+  .research-vision-frame {
+    aspect-ratio: auto;
+    /* Reserve the stacked system and Mars scenes without an inner scrollbar. */
+    height: calc(70cqw + 266px);
+  }
+}
+
 .publication-entry {
   display: grid;
   grid-template-columns: 200px minmax(0, 1fr);
