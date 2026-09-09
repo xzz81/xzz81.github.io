@@ -255,6 +255,13 @@ ul {
   overflow-wrap: anywhere;
 }
 
+.profile-cv a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  font-weight: 600;
+}
+
 .section-block {
   padding: 48px 0;
   border-top: 1px solid var(--line);
