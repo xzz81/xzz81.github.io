@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ChengYang Dong is an AI researcher working on multimodal learning, machine unlearning, and federated learning."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>ChengYang Dong | AI Researcher</title>
+    <link rel="stylesheet" href="styles.css?v=20260909-teaching" />
+    <script src="script.js?v=20260909-lightbox" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="site-name" href="#top" aria-label="ChengYang Dong, home">ChengYang Dong</a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          data-nav-toggle
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#teaching">Volunteer Service</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" id="main-content">
+      <section class="profile" id="top" aria-labelledby="profile-name">
+        <figure class="profile-photo">
+          <img
+            class="photo-image"
+            src="assets/portrait.jpg?v=bc998d0e41f9"
+            width="1086"
+            height="724"
+            fetchpriority="high"
+            alt="Portrait of ChengYang Dong"
+          />
+        </figure>
+
+        <div class="profile-copy">
+          <h1 id="profile-name">ChengYang Dong</h1>
+          <p class="profile-role">AI Researcher and Research Assistant</p>
+          <p>Shenzhen University of Advanced Technology, Shenzhen, China</p>
+          <p class="profile-focus">Unified multimodal models, machine unlearning, and federated learning</p>
+          <p class="profile-email">
+            <strong>Email:</strong>
+            <a href="mailto:yangddd0801@gmail.com">yangddd0801@gmail.com</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section-block" id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
+        <p>
+          I am a Research Assistant at Shenzhen University of Advanced Technology.
+          I study unified multimodal models from the perspectives of training and
+          inference, investigating whether different modalities are genuinely
+          unified rather than merely supported within the same model. I also work
+          on recursive self-improvement (RSI) in embodied agents.
+        </p>
+        <p>
+          My long-term vision is to build self-evolving unified models whose
+          understanding, reasoning, generation, and action continually reinforce
+          one another, enabling open-ended RSI and advancing toward AGI.
+        </p>
+      </section>
+
+      <section class="section-block" id="education" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+
+        <div class="entry-list">
+          <article class="timeline-entry">
+            <p class="entry-date">Aug 2024</p>
+            <div>
+              <h3>University of Glasgow</h3>
+              <p class="entry-role">M.S. in Statistics, Merit</p>
+              <p>Bayesian statistics, probability, data mining and machine learning, and time series.</p>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <p class="entry-date">Jun 2023</p>
+            <div>
+              <h3>Nanjing Audit University</h3>
+              <p class="entry-role">B.E. in Applied Mathematics, Rank 18/60</p>
+              <p>Algebra and analytic geometry, mathematical statistics, and stochastic processes.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title">Publications</h2>
+
+        <div class="publication-list">
+          <article class="publication-entry" id="federated-unlearning-dual-distillation">
+            <figure class="publication-figure">
+              <button class="publication-figure-trigger" type="button" data-figure-open aria-haspopup="dialog" aria-controls="figure-dialog" aria-label="View the FU-Dual framework at full size">
+                <img class="photo-image" src="assets/papers/figures/federated-unlearning-dual-distillation.png?v=20260909" width="1385" height="660" loading="eager" decoding="async" alt="FU-Dual framework connecting client-side proxy datasets to server-side unlearning and distillation mappings. Figure 1 from the NeurIPS 2026 submission." />
+              </button>
+            </figure>
+            <div class="publication-copy">
+              <h3>Federated Unlearning via Dual Distillation</h3>
+              <p class="publication-authors"><strong>Chengyang Dong</strong>, Hokit Fung, Kai Ye, Jialong Sun, Xinyang Liu, Adela S.M. Lau, Guosheng Yin, Bo Liu</p>
+              <p class="publication-status">Submitted to NeurIPS 2026; Scores: 5, 4, 4; AC recommendation: Accept</p>
+              <p class="publication-resources">
+                <a href="assets/papers/federated-unlearning-dual-distillation.pdf" target="_blank" rel="noreferrer" aria-label="Read Federated Unlearning via Dual Distillation PDF">PDF</a>
+                <a href="assets/papers/federated-unlearning-dual-distillation.pdf" download aria-label="Download Federated Unlearning via Dual Distillation PDF">Download</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-entry" id="class-level-unlearning-vlm">
+            <figure class="publication-figure">
+              <button class="publication-figure-trigger" type="button" data-figure-open aria-haspopup="dialog" aria-controls="figure-dialog" aria-label="View the CMU framework at full size">
+                <img class="photo-image" src="assets/papers/figures/concept-level-unlearning-vlm.png?v=20260909" width="1760" height="635" loading="eager" decoding="async" alt="CMU framework: adapter-only unlearning, semantic layer selection, and adaptive-anchor alignment. Figure 3 from the AAAI 2027 submission." />
+              </button>
+            </figure>
+            <div class="publication-copy">
+              <h3>CMU: Concept-Level Machine Unlearning for Vision-Language Models</h3>
+              <p class="publication-authors"><strong>Chengyang Dong</strong>, Hokit Fung, Kai Ye, Jialong Sun, Chutian Wang, Ruize Han, Guosheng Yin, Bo Liu</p>
+              <p class="publication-status">Submitted to AAAI 2027</p>
+              <p class="publication-resources">
+                <a href="assets/papers/concept-level-unlearning-vlm.pdf" target="_blank" rel="noreferrer" aria-label="Read CMU PDF">PDF</a>
+                <a href="assets/papers/concept-level-unlearning-vlm.pdf" download aria-label="Download CMU PDF">Download</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-entry" id="if-cmu">
+            <figure class="publication-figure">
+              <button class="publication-figure-trigger" type="button" data-figure-open aria-haspopup="dialog" aria-controls="figure-dialog" aria-label="View the IF-CMU framework at full size">
+                <img class="photo-image" src="assets/papers/figures/if-cmu.png?v=20260909" width="1850" height="397" loading="eager" decoding="async" alt="IF-CMU framework: ACME layer selection, an image-free unlearning pipeline, and Deep ReAlign. Figure 2 from the manuscript linked by the latest EMNLP record." />
+              </button>
+            </figure>
+            <div class="publication-copy">
+              <h3>IF-CMU: Image-Free Class-Level Machine Unlearning for Vision-Language Models</h3>
+              <p class="publication-authors"><strong>Chengyang Dong</strong>, Jialong Sun, Hokit Fung, Heng Xu, Jialong Li, Ruize Han, Guosheng Yin, Bo Liu</p>
+              <p class="publication-status">Submitted to EMNLP</p>
+              <p class="publication-resources">
+                <a href="assets/papers/if-cmu.pdf" target="_blank" rel="noreferrer" aria-label="Read IF-CMU PDF">PDF</a>
+                <a href="assets/papers/if-cmu.pdf" download aria-label="Download IF-CMU PDF">Download</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-entry" id="s3ad">
+            <figure class="publication-figure">
+              <button class="publication-figure-trigger" type="button" data-figure-open aria-haspopup="dialog" aria-controls="figure-dialog" aria-label="View S3AD figure at full size">
+                <img class="photo-image" src="assets/papers/figures/s3ad.png?v=20260909" width="1450" height="600" loading="eager" decoding="async" alt="S3AD overall architecture and S3-Block detail. Figure 2 from the final Pattern Recognition article." />
+              </button>
+            </figure>
+            <div class="publication-copy">
+              <h3>S3AD: Efficient Industrial Anomaly Detection via Selection, Space, and Scale</h3>
+              <p class="publication-authors">Zhonghua Peng<sup>*</sup>, <strong>Chengyang Dong<sup>*</sup></strong>, Bo Liu, Zuoyong Li, Kun Zeng, Jialong Li</p>
+              <p class="publication-status">Pattern Recognition 179, 113868, 2026</p>
+              <p class="publication-resources">
+                <a href="assets/papers/s3ad.pdf" target="_blank" rel="noreferrer" aria-label="Read S3AD PDF">PDF</a>
+                <a href="assets/papers/s3ad.pdf" download aria-label="Download S3AD PDF">Download</a>
+                <a href="https://doi.org/10.1016/j.patcog.2026.113868" target="_blank" rel="noreferrer">Publisher</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-entry" id="statistical-mia">
+            <figure class="publication-figure">
+              <button class="publication-figure-trigger" type="button" data-figure-open aria-haspopup="dialog" aria-controls="figure-dialog" aria-label="View the SMI overview at full size">
+                <img class="photo-image" src="assets/papers/figures/smi.png?v=20260909" width="1400" height="410" loading="eager" decoding="async" alt="Misalignment between membership inference attacks and unlearned-model auditing. Figure 1 from the SMI NeurIPS 2026 submission." />
+              </button>
+            </figure>
+            <div class="publication-copy">
+              <h3>SMI: Statistical Membership Inference for Reliable Unlearned Model Auditing</h3>
+              <p class="publication-authors">Jialong Sun, Zeming Wei, Jiaxuan Zou, Jiacheng Gong, <strong>Chengyang Dong</strong>, Jie Fu, Heng Xu, Jialong Li, Bo Liu</p>
+              <p class="publication-status">Submitted to NeurIPS 2026; Scores: 6, 4, 4, 4; Recommendation: Accept</p>
+              <p class="publication-resources">
+                <a href="assets/papers/smi.pdf" target="_blank" rel="noreferrer" aria-label="Read SMI PDF">PDF</a>
+                <a href="assets/papers/smi.pdf" download aria-label="Download SMI PDF">Download</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-entry publication-entry--text-only" id="byzantine-robust-dfl">
+            <div class="publication-copy">
+              <h3>Byzantine-robust Defense, Detection, and Recovery for Decentralized Federated Learning</h3>
+              <p class="publication-authors">X. Liu<sup>*</sup>, <strong>Chengyang Dong<sup>*</sup></strong>, S. Peng, B. Liu</p>
+              <p class="publication-status">Under review, IEEE TPAMI</p>
+            </div>
+          </article>
+
+          <article class="publication-entry publication-entry--text-only" id="multiview-human-tracking">
+            <div class="publication-copy">
+              <h3>Refining the Appearance and Motion Representations for Multi-view Multi-Human Identification and Tracking</h3>
+              <p class="publication-authors">R. Wu<sup>*</sup>, C. Lin<sup>*</sup>, <strong>Chengyang Dong</strong>, X. Yang, R. Han</p>
+              <p class="publication-status">PRCV, 2026</p>
+            </div>
+          </article>
+
+          <article class="publication-entry" id="lvstyler">
+            <figure class="publication-figure">
+              <button class="publication-figure-trigger" type="button" data-figure-open aria-haspopup="dialog" aria-controls="figure-dialog" aria-label="View the TranStyler pipeline at full size">
+                <img class="photo-image" src="assets/papers/figures/transtyler.png?v=09883fc6fab6" width="2100" height="1013" loading="eager" decoding="async" alt="TranStyler pipeline showing two training stages and the inference stage. Figure 2 from the AAAI 2027 submission." />
+              </button>
+            </figure>
+            <div class="publication-copy">
+              <h3>TranStyler: Diffusion-Free 3D Texture Stylization via Disentangled Style and UV Supervision</h3>
+              <p class="publication-authors">Hokit Fung, <strong>Chengyang Dong</strong>, Jie Li, Adela S.M. Lau, Guosheng Yin</p>
+              <p class="publication-status">Submitted to AAAI 2027</p>
+              <p class="publication-resources">
+                <a href="assets/papers/transtyler.pdf" target="_blank" rel="noreferrer" aria-label="Read TranStyler PDF">PDF</a>
+                <a href="assets/papers/transtyler.pdf" download aria-label="Download TranStyler PDF">Download</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-entry" id="oracle">
+            <figure class="publication-figure">
+              <button class="publication-figure-trigger" type="button" data-figure-open aria-haspopup="dialog" aria-controls="figure-dialog" aria-label="View the ORACLE pipeline at full size">
+                <img class="photo-image" src="assets/papers/figures/oracle.png?v=20260909" width="2084" height="420" loading="eager" decoding="async" alt="ORACLE pipeline connecting trend-reversion decomposition, Bayesian lookback experts, regime routing, and online abstention. Figure 2 from the AAAI 2027 submission." />
+              </button>
+            </figure>
+            <div class="publication-copy">
+              <h3>ORACLE: Finance-Informed Expert Routing and Online Abstention for Cross-Sectional Stock Ranking</h3>
+              <p class="publication-authors">Hokit Fung, <strong>Chengyang Dong</strong>, Anjie Yang, Heng Xu, Zheng Chen, Guosheng Yin</p>
+              <p class="publication-status">Submitted to AAAI 2027</p>
+              <p class="publication-resources">
+                <a href="assets/papers/oracle.pdf" target="_blank" rel="noreferrer" aria-label="Read ORACLE PDF">PDF</a>
+                <a href="assets/papers/oracle.pdf" download aria-label="Download ORACLE PDF">Download</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-entry" id="dualsparse-vc">
+            <figure class="publication-figure">
+              <button class="publication-figure-trigger" type="button" data-figure-open aria-haspopup="dialog" aria-controls="figure-dialog" aria-label="View the ReTok-VC pipeline at full size">
+                <img class="photo-image" src="assets/papers/figures/retok-vc.png?v=20260909" width="1385" height="780" loading="eager" decoding="async" alt="ReTok-VC pipeline with token reuse decisions, residual quantization, and conditional entropy coding. Figure 1 from the NeurIPS 2026 submission." />
+              </button>
+            </figure>
+            <div class="publication-copy">
+              <h3>ReTok-VC: Variational Token-Level Video Compression with Learned Reuse</h3>
+              <p class="publication-authors">Hokit Fung, Jiacheng Song, <strong>Chengyang Dong</strong>, Adela S.M. Lau, Guosheng Yin</p>
+              <p class="publication-status">Submitted to NeurIPS 2026</p>
+              <p class="publication-resources">
+                <a href="assets/papers/retok-vc.pdf" target="_blank" rel="noreferrer" aria-label="Read ReTok-VC PDF">PDF</a>
+                <a href="assets/papers/retok-vc.pdf" download aria-label="Download ReTok-VC PDF">Download</a>
+              </p>
+            </div>
+          </article>
+        </div>
+        <p class="equal-note">* Equal contribution</p>
+      </section>
+
+      <section class="section-block" id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
+
+        <div class="entry-list">
+          <article class="timeline-entry">
+            <p class="entry-date">Nov 2025 - Present</p>
+            <div>
+              <h3>Shenzhen University of Advanced Technology</h3>
+              <p class="entry-role">Research Assistant, Shenzhen</p>
+              <p>Unified multimodal models, cross-modal representations and reasoning, supervised fine-tuning, and machine unlearning. Continual learning and federated unlearning under non-IID data.</p>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <p class="entry-date">Nov 2024 - Nov 2025</p>
+            <div>
+              <h3>The Chinese University of Hong Kong, Shenzhen</h3>
+              <p class="entry-role">Research Assistant, AIRS, Shenzhen</p>
+              <p>3D generation, video compression, image distillation, and decentralized federated learning. Curated open-source 3D datasets and managed distributed model training.</p>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <p class="entry-date">Jan - Nov 2024</p>
+            <div>
+              <h3>Black Turing AI Limited</h3>
+              <p class="entry-role">AI Research Assistant, Remote</p>
+              <p>Built large-scale fashion datasets and trained deep learning models for text recognition, style extraction, outfit recognition, and style recommendation.</p>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <p class="entry-date">Jul - Aug 2022</p>
+            <div>
+              <h3>China Construction Bank, Nanjing Branch</h3>
+              <p class="entry-role">Investment Banking and Financial Markets</p>
+              <p>Analyzed enterprise financial data using statistical and machine learning methods to support investment decision-making.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="teaching" aria-labelledby="teaching-title">
+        <h2 id="teaching-title">Volunteer Service</h2>
+        <p>Teaching at Houdian Primary School in Anhui and community practice supporting left-behind children.</p>
+
+        <div class="teaching-events">
+          <p><strong>Jul 2021</strong><br />Houdian Primary School, teaching activities in Anhui Province</p>
+          <p><strong>May 2022</strong><br />Community practice supporting left-behind children</p>
+        </div>
+
+        <div class="teaching-gallery" aria-label="Volunteer service photo gallery">
+          <figure class="gallery-slot gallery-slot-wide">
+            <img
+              class="photo-image"
+              src="assets/teaching-01.jpg?v=535d46a627ad"
+              width="1182"
+              height="665"
+              loading="lazy"
+              decoding="async"
+              alt="A volunteer leading a lesson while students participate in the classroom"
+            />
+            <figcaption>In the classroom</figcaption>
+          </figure>
+
+          <figure class="gallery-slot">
+            <img
+              class="photo-image"
+              src="assets/teaching-02.jpg?v=df152f6e46e4"
+              width="1024"
+              height="768"
+              loading="lazy"
+              decoding="async"
+              alt="A volunteer and students taking part in a classroom activity"
+            />
+            <figcaption>Classroom activities</figcaption>
+          </figure>
+
+          <figure class="gallery-slot">
+            <img
+              class="photo-image"
+              src="assets/teaching-03.jpg?v=7ce1f782045d"
+              width="1024"
+              height="768"
+              loading="lazy"
+              decoding="async"
+              alt="Volunteers and students posing together outside a classroom"
+            />
+            <figcaption>With students</figcaption>
+          </figure>
+        </div>
+      </section>
+
+    </main>
+
+    <dialog class="figure-dialog" id="figure-dialog" aria-labelledby="figure-dialog-title">
+      <div class="figure-dialog-header">
+        <h2 id="figure-dialog-title"></h2>
+        <form method="dialog">
+          <button class="figure-dialog-close" type="submit" aria-label="Close figure" title="Close figure" autofocus>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </form>
+      </div>
+      <img class="figure-dialog-image" data-figure-large alt="" />
+    </dialog>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span data-year>2026</span> ChengYang Dong</p>
+        <p><a href="mailto:yangddd0801@gmail.com">Email</a> <span aria-hidden="true">&middot;</span> <a href="#top">Back to top</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
