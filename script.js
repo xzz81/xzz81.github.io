@@ -114,3 +114,39 @@ document.querySelectorAll("[data-photo-slot]").forEach((slot) => {
 
 const year = document.querySelector("[data-year]");
 if (year) year.textContent = new Date().getFullYear();
+
+const teachersDayGreeting = document.querySelector("[data-teachers-day]");
+// One-off 2026 greeting: September 10 ends at midnight in UTC-12 (AoE).
+const teachersDayDeadline = Date.parse("2026-09-11T00:00:00-12:00");
+
+if (teachersDayGreeting && Date.now() < teachersDayDeadline) {
+  let hideTimer;
+  let previousFocus;
+  const dismissGreeting = () => {
+    const restoreFocus = teachersDayGreeting.contains(document.activeElement);
+    teachersDayGreeting.hidden = true;
+    window.clearTimeout(showTimer);
+    window.clearTimeout(hideTimer);
+    if (restoreFocus) previousFocus?.focus({ preventScroll: true });
+  };
+
+  const showTimer = window.setTimeout(() => {
+    const remaining = teachersDayDeadline - Date.now();
+    if (remaining <= 0) return;
+    previousFocus = document.activeElement;
+    teachersDayGreeting.hidden = false;
+    hideTimer = window.setTimeout(dismissGreeting, Math.min(15000, remaining));
+  }, 600);
+
+  document.querySelector("[data-teachers-day-close]").addEventListener("click", dismissGreeting);
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") dismissGreeting();
+  });
+
+  // Re-check when a suspended tab or back/forward-cached page becomes visible.
+  const checkGreetingExpiry = () => {
+    if (Date.now() >= teachersDayDeadline) dismissGreeting();
+  };
+  window.addEventListener("pageshow", checkGreetingExpiry);
+  document.addEventListener("visibilitychange", checkGreetingExpiry);
+}
