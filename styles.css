@@ -440,6 +440,15 @@ body.figure-open {
   line-height: 1.7;
 }
 
+.publication-authors a {
+  color: #0969da;
+}
+
+.publication-authors a:hover,
+.publication-authors a:focus-visible {
+  color: #0550ae;
+}
+
 .publication-authors strong {
   color: var(--text);
   text-decoration: underline;
