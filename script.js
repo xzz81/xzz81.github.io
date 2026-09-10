@@ -150,3 +150,43 @@ if (teachersDayGreeting && Date.now() < teachersDayDeadline) {
   window.addEventListener("pageshow", checkGreetingExpiry);
   document.addEventListener("visibilitychange", checkGreetingExpiry);
 }
+
+(() => {
+  const endpoint = document.currentScript?.dataset.visitEndpoint;
+  const site = document.currentScript?.dataset.visitSite;
+  if (!endpoint || !site || window.location?.origin !== site) return;
+  if (window.location.pathname !== "/" && window.location.pathname !== "/index.html") return;
+  if (navigator.doNotTrack === "1" || window.doNotTrack === "1" || navigator.globalPrivacyControl) return;
+  if (!window.fetch || !window.crypto?.randomUUID || window.__homepageVisitAttempted) return;
+  try {
+    const url = new URL(endpoint);
+    if (url.protocol !== "https:" || url.pathname !== "/visit" || url.search || url.hash || url.username || url.password) return;
+  } catch {
+    return;
+  }
+
+  // Count a visible page load, not a person. No persistent identifier or browser storage.
+  const recordVisit = () => {
+    if (document.visibilityState !== "visible" || document.prerendering || window.__homepageVisitAttempted) return;
+    window.__homepageVisitAttempted = true;
+    document.removeEventListener("visibilitychange", recordVisit);
+    document.removeEventListener("prerenderingchange", recordVisit);
+    try {
+      window.fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
+        body: JSON.stringify({ v: 1, id: window.crypto.randomUUID(), page: window.location.pathname }),
+        mode: "cors",
+        credentials: "omit",
+        referrerPolicy: "no-referrer",
+        cache: "no-store",
+        keepalive: true,
+      }).catch(() => {});
+    } catch {
+      // Analytics failure must never affect navigation, figures, or downloads.
+    }
+  };
+  document.addEventListener("visibilitychange", recordVisit);
+  document.addEventListener("prerenderingchange", recordVisit);
+  recordVisit();
+})();

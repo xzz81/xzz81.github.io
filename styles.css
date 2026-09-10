@@ -660,6 +660,23 @@ body.figure-open {
   gap: 24px;
 }
 
+.visit-privacy {
+  padding-bottom: 20px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.visit-privacy summary {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.visit-privacy p {
+  max-width: 80ch;
+  margin: 10px 0 0;
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 760px) {
   :root {
     --gutter: 19px;
