@@ -633,22 +633,9 @@ body.figure-open {
   overflow-wrap: anywhere;
 }
 
-.teachers-day-english {
-  margin-top: 2px;
-  font-family: var(--serif);
-  font-size: 18px;
-}
-
 .teachers-day-wish {
   margin-top: 14px;
   font-size: 14px;
-}
-
-.teachers-day-thanks {
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.5;
 }
 
 @keyframes teachers-day-pop {
